@@ -99,7 +99,7 @@ def tobs():
     session = Session(engine)
 
     # from Measurements query dates and temps from the past year
-    year_of_temps = engine.execute('SELECT date, tobs FROM measurement WHERE strftime("%Y-%m-%d", date) BETWEEN "2016-08-23" AND "2017-08-23"').fetchall()
+    year_of_temps = engine.execute('SELECT date, tobs FROM measurement WHERE strftime("%Y-%m-%d", date) BETWEEN "2016-08-23" AND "2017-08-23" AND station="USC00519281"').fetchall()
 
     session.close()
 
@@ -107,7 +107,7 @@ def tobs():
     temps = []
     for date, tobs in year_of_temps:
         temps.append(tobs)
-    return jsonify(temps)
+    return jsonify(temps) 
 
 @app.route("/api/v1.0/<start>")
 def start(start):
@@ -129,11 +129,11 @@ def start_end(start, end):
     # Create our session (link) from Python to the DB
     session = Session(engine)
 
-    # from Measurements query temps from a chosen start date
+    # from Measurements query temps from a chosen start date to an end date
     #find the max, min, and avg out of these temps
     tavg = session.query(func.avg(Measurement.tobs)).filter(Measurement.date >= '2016-01-01').filter(Measurement.date <= '2016-12-31').all()
-    tmin = session.query(func.max(Measurement.tobs)).filter(Measurement.date >= '2016-01-01').filter(Measurement.date <= '2016-12-31').all()
-    tmax = session.query(func.avg(Measurement.tobs)).filter(Measurement.date >= '2016-01-01').filter(Measurement.date <= '2016-12-31').all()
+    tmin = session.query(func.min(Measurement.tobs)).filter(Measurement.date >= '2016-01-01').filter(Measurement.date <= '2016-12-31').all()
+    tmax = session.query(func.max(Measurement.tobs)).filter(Measurement.date >= '2016-01-01').filter(Measurement.date <= '2016-12-31').all()
 
     session.close()
 
