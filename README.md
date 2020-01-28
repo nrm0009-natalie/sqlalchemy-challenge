@@ -33,11 +33,11 @@ Python with SQL-alchemy was utilized to store, inspect, and manipulate the data,
 2. What weather stations are collecting climate data?
     * /api/v1.0/stations
 3. For the most active weather station, what is the recorded temperature for each day during the last twelve months on record?
-    */api/v1.0/tobs
+    * /api/v1.0/tobs
 4. Given a start date, what are the maximum, minimum, and average temperatures for that date and all future dates on record?
-    * /api/v1.0/<start>
+    * /api/v1.0/start
 5. Given a set of start and end dates, what are the maximum, minimum, and average temperatures for those dates and all in-between?
-    * /api/v1.0/<start> and /api/v1.0/<start>/<end>
+    * /api/v1.0/start and /api/v1.0/start/end
 
 ## Datasets
 
@@ -50,7 +50,11 @@ Python with SQL-alchemy was utilized to store, inspect, and manipulate the data,
 ## Visualizations
 
 <img src = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/Precipitation_2016-1017.png>
+
+
 <img scr = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/climate-app.py>
+
+
 <img src = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/sqlalchemy_bargraph.png>
 
 
