@@ -51,10 +51,10 @@ Python with SQL-alchemy was utilized to store, inspect, and manipulate the data,
 
 <img src = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/Precipitation_2016-1017.png>
 
+## 
+<img scr = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/sqlalchemy_histogram.png>
 
-<img scr = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/climate-app.py>
-
-
+## 
 <img src = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/sqlalchemy_bargraph.png>
 
 
