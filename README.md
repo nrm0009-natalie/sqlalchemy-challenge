@@ -54,6 +54,9 @@ Python with SQL-alchemy was utilized to store, inspect, and manipulate the data,
 ## 
 <img scr = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/sqlalchemy_histogram.png>
 
+
+
+
 ## 
 <img src = https://github.com/nrm0009-natalie/sqlalchemy-challenge/blob/master/sqlalchemy_bargraph.png>
 
